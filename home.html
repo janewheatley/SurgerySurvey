@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/main.css">
+
+
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 id="header">
+            Post-Surgery Survey
+        </h1>
+    </div>
+
+    <div class="container question">
+        <h2>What kind of surgery did you have?</h2>
+        <select class="form-control" id="surgeryType">
+            <option>Select an Option</option>
+            <option>Hip Replacement</option>
+            <option>Knee Replacement</option>
+        </select>
+    </div>
+
+    <div class="container question">
+        <h2>How old are you?</h2>
+        <select class="form-control" id="age">
+            <option> Select an Option</option>
+            <option>Under 50</option>
+            <option>50-65</option>
+            <option>66-80</option>
+            <option>Over 80</option>
+        </select>
+    </div>
+
+    <div class="container question">
+        <h2>What kind of medication were you given?</h2>
+        <div class="row col-sm-6 medRow1">
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Tylenol">Tylenol</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Celebrex">Celebrex</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Oxycodone">Oxycodone</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Oxycotin">Oxycotin</label>
+            </div>
+        </div>
+        <div class="row col-sm-6 medRow2">
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Dilaudid">Dilaudid</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Tramadol">Tramadol</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Aspirin">Aspirin</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" class="medType" onclick="selectMeds(this)" value="Warfarin/Coumadin">Warfarin/Coumadin</label>
+            </div>
+        </div>
+    </div>
+    <div id="endOfPage"></div>
+    <!--hidden-->
+    <!--
+    <div class="container question questionMed hidden">
+        <h2 class="hiddenQ">Did you need a refill of </h2>
+        <select class="form-control" id="medAmount">
+                <option>Select an Option</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+    </div>
+-->
+    <!--hidden-->
+
+    <div class="container question">
+        <h2>Do you feel you were given enough medication?</h2>
+        <select class="form-control" id="medAmount">
+                <option>Select an Option</option>
+                <option>Too much</option>
+                <option>Just right</option>
+                <option>Not enough</option>
+            </select>
+    </div>
+
+    <div class="container question">
+        <h2>How well was your pain controlled on a scale of 1-10?</h2>
+        <p>1 being the most pain, 10 being the least.</p>
+        <select class="form-control" id="painScale">
+            <option>Select an Option</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select>
+    </div>
+
+    <div class="container question">
+        <h2>Were you satisfied with your pain control?</h2>
+        <select class="form-control" id="medAmount">
+                <option>Select an Option</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+    </div>
+
+    <div class="container">
+        <div class="buttonContainer">
+            <button type="button" class="btn btn-lg submit" id="submit">Submit</button>
+        </div>
+
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
